@@ -2,7 +2,7 @@ package shoppingcart;
 
 public class ShoppingCart {
 
-    private double gesamtpreis = 0.0;
+    private double gesamtpreis;
 
     public void addArtikel(double preis) {
         gesamtpreis += preis;
