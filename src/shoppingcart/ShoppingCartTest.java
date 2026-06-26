@@ -33,6 +33,17 @@ class ShoppingCartTest {
 
         assertEquals(2, cart.getQuantity());
     }
- 
+    @Test
+    void artikelEntfernenVerringertGesamtpreis() {
+        ShoppingCart cart = new ShoppingCart();
+
+        cart.addArtikel(2.50);
+        cart.addArtikel(3.00);
+
+        cart.removeArtikel(2.50);
+
+        assertEquals(3.00, cart.getGesamtpreis());
+        assertEquals(1, cart.getQuantity());
+    }
     
 }
