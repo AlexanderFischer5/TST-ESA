@@ -2,8 +2,13 @@ package shoppingcart;
 
 public class ShoppingCart {
 
-    public double getGesamtpreis() {
-        return 0.0;
+    private double gesamtpreis = 0.0;
+
+    public void addArtikel(double preis) {
+        gesamtpreis += preis;
     }
 
+    public double getGesamtpreis() {
+        return gesamtpreis;
+    }
 }
