@@ -24,5 +24,9 @@ public class ShoppingCart {
     public int getQuantity() {
         return artikel.size();
     }
+    
+    public void removeArtikel(double preis) {
+        artikel.remove(Double.valueOf(preis));
+    }
 
 }
