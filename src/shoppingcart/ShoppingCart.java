@@ -1,21 +1,28 @@
 package shoppingcart;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class ShoppingCart {
 
-    private double gesamtpreis;
-    private int anzahl;
+    private List<Double> artikel = new ArrayList<>();
 
     public void addArtikel(double preis) {
-        gesamtpreis += preis;
-        anzahl++;
+        artikel.add(preis);
     }
 
     public double getGesamtpreis() {
-        return gesamtpreis;
+        double summe = 0;
+
+        for (double preis : artikel) {
+            summe += preis;
+        }
+
+        return summe;
     }
 
     public int getQuantity() {
-        return anzahl;
+        return artikel.size();
     }
 
 }
