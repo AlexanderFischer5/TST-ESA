@@ -23,4 +23,16 @@ class ShoppingCartTest {
         assertEquals(2.50, cart.getGesamtpreis());
     }
     
+    
+    @Test
+    void anzahlDerArtikelWirdRichtigGezaehlt() {
+        ShoppingCart cart = new ShoppingCart();
+
+        cart.addArtikel(2.50);
+        cart.addArtikel(3.00);
+
+        assertEquals(2, cart.getQuantity());
+    }
+ 
+    
 }
